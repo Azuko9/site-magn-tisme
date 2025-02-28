@@ -77,6 +77,7 @@ main{
 
 .end-animation {
     bottom: -5px;
+    z-index: 1;
   }
 
 
@@ -85,12 +86,15 @@ main{
     text-align: center;
     position: fixed;
     transition: 1s;
+    z-index: 0;
    
 }
+
 
 #picProfile{
     width: 150px;
     border-radius: 50%;
+    z-index: 3;
 
 }
 .container{
@@ -115,12 +119,13 @@ main{
     border-radius: 10px;
 }
 .box p{
-    margin-top: 20px;
-    font-size: 1.5em;
+    font-size: 1em;
     max-width: 800px;
+    padding: 0 10px;
     margin: 80px auto;
     text-align: justify;
 }
+
 
 #storm{
     background-image: url(img/storm.jpg);

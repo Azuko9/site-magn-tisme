@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         scroll.innerText = scrollY;
 
-        let tranche = Math.floor(scrollY / 500);
+        let tranche = Math.floor(scrollY / 250);
         // Nouvelle valeur de brightness = valeur de base + (nombre de tranches * incrément)
         let brightnessValue = baseBrightness + (tranche * increment);
         console.log("Valeur de brightness :", brightnessValue);
