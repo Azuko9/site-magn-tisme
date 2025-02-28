@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    
+}
+body{
+    max-width: 1920px;	
+    height: 20000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #070a31;
+    padding-top: 54px;
+    
+
+
+}
+header{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    max-width: 1920px;
+    height: 100vh;
+    background-image: url(img/stars.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+nav{
+    z-index: 3;
+    padding: 10px;
+    margin:  0;
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+main{
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ 
+}
+
+#backgroundMontain{
+    position: fixed;
+    max-width: 1920px;
+    filter: brightness(0.1);
+    transition: 1s;
+    
+}
+
+#backgroundMontain img{
+    max-width: 1921px;
+    width: auto
+}
+
+.start-animation {
+    bottom: -300px;
+    z-index: 2;
+  }
+
+.end-animation {
+    bottom: -5px;
+  }
+
+
+#Title{
+    margin-top: 45px;
+    text-align: center;
+    position: fixed;
+    transition: 1s;
+   
+}
+
+#picProfile{
+    width: 150px;
+    border-radius: 50%;
+
+}
+.container{
+   position: absolute;
+   margin-top: 2000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:  2500px;
+    
+}
+
+.box{
+    
+    height: 80vh;
+    width: 80%;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    border-radius: 10px;
+}
+.box p{
+    margin-top: 20px;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 80px auto;
+    text-align: justify;
+}
+
+#storm{
+    background-image: url(img/storm.jpg);
+}
+
+.sun{
+    background-image: url(img/sun.jpg);
+}
+
+.zen{
+    background-image: url(img/zen.jpg);
+}
+
+
+
+#metatron{
+    width: 217px;
+    height: 241px;
+    position: fixed;
+    background-image: url(img/metatron.webp);
+    background-position: center;
+    background-size: cover;
+    
+   
+}
+.startMetatron{
+
+    z-index: -1;
+    left: auto;
+    scale:1;
+}
+
+.endMetatron{
+    z-index: 4;
+    left: -50px;
+    bottom: -60px;
+    scale: 0.5;
+}
+
+#footer{
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 200px;
+    max-width: 1920px;
+    height: 54px;
+    background-color: #070a31;
+}
