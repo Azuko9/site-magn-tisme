@@ -54,6 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
+        if (scrollY > 2000 && scrollY < 4000) {
+            container.style.top = `${scrollY - 2000}px`;
+
+
+        }
+
+        if (scrollY > 5000 && scrollY < 7000) {
+            container.style.top = `${scrollY - 5000}px`;
+
+        }
+
 
     }
 
