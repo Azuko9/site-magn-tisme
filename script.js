@@ -1,76 +1,98 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const bgMontain = document.getElementById("backgroundMontain");
-    const baseBrightness = 0.05; // valeur initiale
-    const increment = 0.01;
     const metatron = document.getElementById("metatron");
     const title = document.getElementById("Title");
-    const scroll = document.getElementById("footer");
+    const footer = document.getElementById("footer");
     const container = document.querySelector(".container");
 
+    const baseBrightness = 0.05;
+    const increment = 0.01;
+
     function handleScroll() {
-        // Récupération de la position verticale du scroll
-        let scrollY = window.scrollY || document.documentElement.scrollTop;
-        console.log("Valeur de scroll vertical :", scrollY);
+        const scrollY = window.scrollY || document.documentElement.scrollTop;
+        // Debug
+        // footer.innerText = scrollY;
 
-        scroll.innerText = scrollY;
+        // 1. Gérer la luminosité
+        const tranche = Math.floor(scrollY / 75);
+        const brightnessValue = baseBrightness + (tranche * increment);
+        bgMontain.style.filter = `brightness(${brightnessValue})`;
 
-        let tranche = Math.floor(scrollY / 250);
-        // Nouvelle valeur de brightness = valeur de base + (nombre de tranches * incrément)
-        let brightnessValue = baseBrightness + (tranche * increment);
-        console.log("Valeur de brightness :", brightnessValue);
+        // 2. Gérer l’animation du background
+        // On bascule entre start-animation et end-animation
+        const isOver200 = (scrollY > 500);
+        bgMontain.classList.toggle("start-animation", isOver200);
+        bgMontain.classList.toggle("end-animation", !isOver200);
 
-
-        // Appliquer le nouveau filtre directement sur l'élément
-
+        // 3. Gérer Metatron (rotation + changement de classe)
         metatron.style.transform = `rotate(${scrollY / 10}deg)`;
+        const isOver150 = (scrollY > 1500);
+        metatron.classList.toggle("startMetatron", !isOver150);
+        metatron.classList.toggle("endMetatron", isOver150);
 
+        // 4. Gérer l’opacité du titre
+        title.style.opacity = isOver150 ? "0" : "1";
+        title.style.position = isOver150 ? "relative" : "fixed";
 
-
-
-        // Ajouter la classe si scrollY > 100, sinon la retirer
-        if (scrollY > 200) {
-            bgMontain.classList.add("start-animation");
-            bgMontain.classList.remove("end-animation");
-            bgMontain.style.filter = `brightness(${brightnessValue})`;
-
-
-
+        // 5. Gérer la position du container (exemple)
+        // (Penser à une formule plus lissée ou adaptative)
+        if (scrollY > 2000 && scrollY < 3000) {
+            container.style.top = (scrollY - 1900) + "px";
         }
-        else {
-            bgMontain.classList.remove("start-animation");
-            bgMontain.classList.add("end-animation");
-            title.style.position = "fixed";
+        else if (scrollY > 4500 && scrollY < 5500) {
+            container.style.top = (scrollY - 1900) + "px";
         }
-
-        if (scrollY > 1500) {
-            title.style.opacity = "0";
-            metatron.classList.remove("startMetatron")
-            metatron.classList.add("endMetatron")
-        }
-        else {
-            title.style.opacity = "1";
-            metatron.classList.add("startMetatron")
-            metatron.classList.remove("endMetatron")
-
-        }
-
-        if (scrollY > 2000 && scrollY < 4000) {
-            container.style.top = `${scrollY - 2000}px`;
-
-
-        }
-
-        if (scrollY > 5000 && scrollY < 7000) {
-            container.style.top = `${scrollY - 5000}px`;
-
-        }
-
     }
 
-
-    // Attacher l'événement de scroll à la fenêtre
     window.addEventListener("scroll", handleScroll);
+});
 
+document.addEventListener("DOMContentLoaded", function () {
+    const audioElements = document.querySelectorAll("audio");
 
-}
-);
+    audioElements.forEach((audio) => {
+        audio.addEventListener("play", () => {
+
+            // Pour chaque élément audio...
+            audioElements.forEach((otherAudio) => {
+                // ...si ce n'est pas celui qui vient de se lancer,
+                // on le met en pause et on remet son temps à zéro.
+                if (otherAudio !== audio) {
+                    otherAudio.pause();
+                    otherAudio.currentTime = 0;
+                }
+            });
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const audioElements = document.querySelectorAll("audio");
+
+    audioElements.forEach((audio) => {
+        audio.addEventListener("play", () => {
+            // Pour chaque élément audio...
+            audioElements.forEach((otherAudio) => {
+                // ...si ce n'est pas celui qui vient de se lancer,
+                // on le met en pause et on remet son temps à zéro.
+                if (otherAudio !== audio) {
+                    otherAudio.pause();
+                    otherAudio.currentTime = 0;
+                    otherAudio.classList.remove("invert-colors");
+                }
+            });
+            // Ajouter la classe d'inversion de couleurs à l'audio en lecture
+            audio.classList.add("invert-colors");
+        });
+
+        audio.addEventListener("pause", () => {
+            // Retirer la classe d'inversion de couleurs lorsque l'audio est en pause
+            audio.classList.remove("invert-colors");
+        });
+
+        audio.addEventListener("ended", () => {
+            // Retirer la classe d'inversion de couleurs lorsque l'audio est terminé
+            audio.classList.remove("invert-colors");
+        });
+    });
+});
