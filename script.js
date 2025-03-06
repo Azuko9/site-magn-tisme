@@ -36,12 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 5. Gérer la position du container (exemple)
         // (Penser à une formule plus lissée ou adaptative)
-        if (scrollY > 2000 && scrollY < 3000) {
-            container.style.top = (scrollY - 1900) + "px";
+        if (scrollY > 2000 && scrollY < 3500) {
+            container.style.top = (scrollY - 1950) + "px";
         }
-        else if (scrollY > 4500 && scrollY < 5500) {
-            container.style.top = (scrollY - 1900) + "px";
-        }
+
     }
 
     window.addEventListener("scroll", handleScroll);
