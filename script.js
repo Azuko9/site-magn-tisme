@@ -36,8 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 5. Gérer la position du container (exemple)
         // (Penser à une formule plus lissée ou adaptative)
-        if (scrollY > 2000 && scrollY < 3500) {
-            container.style.top = (scrollY - 1950) + "px";
+        if (window.innerWidth > 768) {
+            // Si la largeur est supérieure à 768px, appliquez l'effet
+            if (scrollY > 2000 && scrollY < 3500) {
+                container.style.top = (scrollY - 1950) + "px";
+            } else {
+                // Réinitialisez la position si en dehors de la plage de défilement spécifiée
+                container.style.top = "auto";
+            }
+        } else {
+            // Réinitialisez la position pour les écrans mobiles
+            container.style.top = "auto";
         }
 
     }
@@ -94,3 +103,5 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
