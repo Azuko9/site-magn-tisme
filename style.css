@@ -224,13 +224,5 @@ a{
         width: auto;
         scale: 3.5;
     }
-    .start-animation {
-        bottom: -300px;
-        z-index: 2;
-      }
-    
-    .end-animation {
-        bottom: 500px;
-        z-index: 1;
-      }
+
   }
