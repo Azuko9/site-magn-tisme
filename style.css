@@ -219,11 +219,11 @@ a{
 }
 
 
-@media (orientation: portrait) {
+/* @media (orientation: portrait) {
     #backgroundMontain img{
 
         width: auto;
         scale: 2.5;
     }
 
-  }
+  } */
