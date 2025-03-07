@@ -233,8 +233,3 @@ a{
   }
 
   /* Media query pour les écrans mobiles */
-@media (max-width: 768px) {
-    .mobile-screen {
-        display: none; /* Ou tout autre style que vous souhaitez appliquer */
-    }
-}
