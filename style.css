@@ -36,14 +36,14 @@ header{
 nav{
     z-index: 3;
     padding: 10px;
-    margin:  0;
+    margin:  0 30px;
     text-align: center;
 
 }
 
 ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -186,7 +186,7 @@ main{
     bottom: 0;
     width: 100vw;
     max-width: 1920px;
-    padding-bottom: 25px;
+    padding-bottom: 32px;
 
 }
 li{
