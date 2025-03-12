@@ -18,17 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // 1. Gestion de la luminosité de bgMontain
         const tranche = Math.floor(scrollY / 75);
         let brightnessValue = baseBrightness + (tranche * increment);
-        // Optionnel : on peut limiter la valeur maximale à 1
         if (brightnessValue > 1) brightnessValue = 1;
         bgMontain.style.filter = `brightness(${brightnessValue})`;
 
         // Synchronisation de l'opacité du header avec la luminosité
         header.style.opacity = 1 - (brightnessValue * 1.5);
-
-        console.log(header);
-
-
-
 
         // 2. Gestion de l'animation du background
         const isOver200 = scrollY > 500;
@@ -45,8 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
         title.style.opacity = isOver150 ? "0" : "1";
         title.style.position = isOver150 ? "relative" : "fixed";
 
-        // 5. Gestion de la position du container selon la largeur de l'écran
-        if (window.innerWidth > 768) {
+        // 5. Gestion de la position du container sauf sur iPad/iPhone
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+        if (window.innerWidth > 768 && !isIOS) {
             if (scrollY > 2000 && scrollY < 3500) {
                 container.style.top = (scrollY - 1950) + "px";
             } else {
@@ -62,7 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Gestion des audios : lecture exclusive et inversion des couleurs
     audioElements.forEach((audio) => {
         audio.addEventListener("play", () => {
-            // Pause et réinitialisation des autres audios
             audioElements.forEach((otherAudio) => {
                 if (otherAudio !== audio) {
                     otherAudio.pause();
@@ -70,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     otherAudio.classList.remove("invert-colors");
                 }
             });
-            // Ajout de la classe d'inversion pour l'audio en lecture
             audio.classList.add("invert-colors");
         });
 
@@ -83,5 +77,4 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 
