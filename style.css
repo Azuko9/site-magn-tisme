@@ -5,14 +5,17 @@
     
 }
 body{
-    max-width: 1920px;
     min-height: 4500px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: #070a31;
     padding-top: 54px;
+    background-image: url(img/sunsky.jpg);
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     
 
 
@@ -24,7 +27,6 @@ header{
 
     top: 0;
     width: 100vw;
-    max-width: 1920px;
     height: 100vh;
     background-image: url(img/stars.jpeg);
     background-size: cover;
@@ -185,7 +187,6 @@ main{
     z-index: 3;
     bottom: 0;
     width: 100vw;
-    max-width: 1920px;
     padding-bottom: 32px;
 
 }
