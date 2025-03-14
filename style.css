@@ -13,9 +13,10 @@ body{
     padding-top: 54px;
     background-image: url(img/sunsky.jpg);
     background-position: top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
     
 
 
@@ -27,10 +28,9 @@ header{
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url(img/stars.jpeg);
+    background-image: url(img/stars.jpg);
     background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
+    background-position: bottom;
     background-repeat: no-repeat;
 }
 
@@ -63,6 +63,7 @@ main{
     max-width: 1920px;
     filter: brightness(0.1);
     transition: 1s;
+    z-index: -1;
     
 }
 
@@ -72,12 +73,12 @@ main{
 }
 
 .start-animation {
-    bottom: -300px;
+    bottom: -400px;
     z-index: 2;
   }
 
 .end-animation {
-    bottom: -30px;
+    bottom: -100px;
     z-index: 1;
   }
 
@@ -129,13 +130,13 @@ main{
     color: #fff;
     padding: 20px;
     border-radius: 10px;
-    opacity: 0.5;
     transition: 1s;
+    filter: grayscale(0.8);
     
 }
 .box:hover{
-    opacity: 1;
-    transform: scale(1.01);
+    transform: scale(1.02);
+    filter: grayscale(0);
 }
 .box p{
     font-size: 1em;
@@ -222,7 +223,6 @@ a{
     #backgroundMontain img{
         max-width: 1921px;
         width: auto;
-        scale: 2;
     }
  }
 

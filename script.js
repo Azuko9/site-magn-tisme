@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         header.style.opacity = 1 - (brightnessValue * 1.75);
 
         // 2. Gestion de l'animation du background
-        const isOver200 = scrollY > 200;
+        const isOver200 = scrollY > 50;
         bgMontain.classList.toggle("start-animation", isOver200);
         bgMontain.classList.toggle("end-animation", !isOver200);
 
