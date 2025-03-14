@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bgMontain.style.filter = `brightness(${brightnessValue})`;
 
         // Synchronisation de l'opacité du header avec la luminosité
-        header.style.opacity = 1 - (brightnessValue * 1.5);
+        header.style.opacity = 1 - (brightnessValue * 1.75);
 
         // 2. Gestion de l'animation du background
         const isOver200 = scrollY > 200;
