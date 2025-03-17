@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     color: white;
-    
+
 }
-body{
+
+body {
     min-height: 4500px;
     display: flex;
     flex-direction: column;
@@ -17,13 +18,13 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    
+
 
 
 }
 
 
-header{
+header {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -34,15 +35,15 @@ header{
     background-repeat: no-repeat;
 }
 
-nav{
+nav {
     z-index: 3;
     padding: 10px;
-    margin:  0 30px;
+    margin: 0 30px;
     text-align: center;
 
 }
 
-ul{
+ul {
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -51,60 +52,241 @@ ul{
 }
 
 
-main{
+main {
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#backgroundMontain{
+#star {
+    width: 800px;
+    height: 200px;
+    scale: 1.5;
+
+
+}
+
+#star div p {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    left: -50px;
+    transition: 0.5s;
+}
+
+@keyframes starsshine {
+    0% {
+        background-color: #ffffff66;
+    }
+
+
+    50% {
+        background-color: #ffffff66;
+        scale: 1;
+    }
+
+    60% {
+        background-color: #ffffff;
+        scale: 1.8;
+    }
+
+    70% {
+        background-color: #ffffff66;
+        scale: 1;
+    }
+
+    100% {
+        background-color: #ffffff66;
+    }
+}
+
+.stars {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s;
+    background-color: #ffffff66;
+
+}
+
+.stars:hover {
+    scale: 1.2;
+    animation: none;
+
+}
+
+.stars:hover p {
+    opacity: 1;
+}
+
+.sticks {
+    background-color: #ffffff;
+    height: 1px;
+    border-radius: 0.5px;
+    position: relative;
+}
+
+.sone {
+
+    left: 0;
+    top: 140px;
+    animation: 2.5s starsshine 4s infinite linear;
+}
+
+.colp {
+    top: 10px;
+    opacity: 0;
+
+}
+
+.tone {
+    left: 10px;
+    top: 133px;
+    rotate: -30deg;
+    transform-origin: 0% 0%;
+    width: 180px;
+}
+
+.stwo {
+    left: 170px;
+    top: 36px;
+    animation: 2.5s starsshine 2s infinite linear;
+}
+
+.somp {
+    top: -40px;
+    opacity: 0;
+
+}
+
+.ttwo {
+    left: 180px;
+    top: 36px;
+    rotate: 40deg;
+    transform-origin: 0% 0%;
+    width: 100px;
+}
+
+.sthree {
+    left: 260px;
+    top: 102px;
+    animation: starsshine 2.5s infinite linear;
+
+}
+
+.sthree p {
+    top: 10px;
+    opacity: 0;
+}
+
+.sfour {
+    left: 380px;
+    top: 116px;
+    animation: 2.5s starsshine 6s infinite linear;
+}
+
+.tfour {
+    left: 390px;
+    top: 108px;
+    rotate: -35deg;
+    transform-origin: 0% 0%;
+    width: 60px;
+}
+
+.sfive {
+    left: 444px;
+    top: 66px;
+    animation: 2.5s starsshine 6s infinite linear;
+}
+
+.tfive {
+    left: 454px;
+    top: 66px;
+    rotate: 36deg;
+    transform-origin: 0% 0%;
+    width: 80px;
+}
+
+.ssix {
+    left: 522px;
+    top: 114px;
+    animation: 2.5s starsshine 4s infinite linear;
+}
+
+.tsix {
+    left: 532px;
+    top: 106px;
+    rotate: -42deg;
+    transform-origin: 0% 0%;
+    width: 120px;
+}
+
+.sseven {
+    left: 625px;
+    top: 17px;
+    animation: 2.5s starsshine 2s infinite linear;
+}
+
+.tseven {
+    left: 635px;
+    top: 17px;
+    rotate: 28deg;
+    transform-origin: 0% 0%;
+    width: 160px;
+}
+
+.seight {
+    left: 780px;
+    top: 92px;
+    animation: 2.5s starsshine 0s infinite linear;
+}
+
+#backgroundMontain {
     position: fixed;
     max-width: 1920px;
     filter: brightness(0.1);
     transition: 1s;
     z-index: -1;
-    
+
 }
 
-#backgroundMontain img{
+#backgroundMontain img {
     max-width: 1921px;
     width: auto
 }
 
+
 .start-animation {
     bottom: -400px;
     z-index: 2;
-  }
+}
 
 .end-animation {
     bottom: -100px;
     z-index: 1;
-  }
+}
 
 
-#Title{
+#Title {
     margin-top: 45px;
     text-align: center;
     position: fixed;
     transition: 1s;
     z-index: 0;
-   
+
 }
 
 
-#picProfile{
+#picProfile {
     width: 150px;
     border-radius: 50%;
     z-index: 3;
 
 }
-#stars{
-    width: 800px;
-    height: 300px;
-    
-}
-.container{
+
+.container {
     z-index: -1;
     margin-top: 2000px;
     padding-bottom: 30vh;
@@ -113,13 +295,13 @@ main{
     align-items: center;
     justify-content: center;
     display: flex;
-    flex-wrap: wrap;  
-    gap: 20px;  
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.box{
-    
-    height:500px;
+.box {
+
+    height: 500px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -132,15 +314,17 @@ main{
     border-radius: 10px;
     transition: 1s;
     filter: grayscale(0.8);
-    
+
 }
-.box:hover{
+
+.box:hover {
     transform: scale(1.02);
     filter: grayscale(0);
 }
-.box p{
+
+.box p {
     font-size: 1em;
-    background-color: #00000044;
+    background-color: #00000090;
     border-radius: 10px;
     max-width: 800px;
     padding: 20px;
@@ -149,45 +333,46 @@ main{
 }
 
 
-#storm{
+#storm {
     background-image: url(img/storm.jpg);
 }
 
-#sun{
+#sun {
     background-image: url(img/sun.jpg);
 }
 
-#zen{
+#zen {
     background-image: url(img/zen.jpg);
 }
 
 
 
-#metatron{
+#metatron {
     width: 217px;
     height: 241px;
     position: fixed;
     background-image: url(img/metatron.webp);
     background-position: center;
     background-size: cover;
-    
-   
+
+
 }
-.startMetatron{
+
+.startMetatron {
 
     z-index: -1;
     left: auto;
-    scale:1;
+    scale: 1;
 }
 
-.endMetatron{
+.endMetatron {
     z-index: 4;
     left: -50px;
     bottom: -60px;
     scale: 0.5;
 }
 
-#footer{
+#footer {
     position: fixed;
     z-index: 3;
     bottom: 0;
@@ -195,19 +380,22 @@ main{
     padding-bottom: 32px;
 
 }
-li{
+
+li {
 
     background-color: #ffffffaa;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 20px;
-    
+
 
 }
-li:hover{
+
+li:hover {
     background-color: #ffffff;
 }
-a{
+
+a {
     color: black;
     text-decoration: none;
 }
@@ -216,35 +404,43 @@ a{
 
 
 
+@media screen and (max-width: 1280px) {
+    #star {
+        scale: 1;
+    }
+}
 
 
-
- @media screen and (min-height: 1080px) {
-    #backgroundMontain img{
+@media screen and (min-height: 1080px) {
+    #backgroundMontain img {
         max-width: 1921px;
         width: auto;
     }
- }
+}
 
- .invert-colors {
+.invert-colors {
     filter: invert(100%);
 }
 
 
 @media (orientation: portrait) {
-    #backgroundMontain img{
+    #backgroundMontain img {
 
         width: auto;
         scale: 1;
     }
 
-    .box{
+    .box {
         opacity: 1;
         margin-bottom: 100px;
     }
 
-  }
+    #star {
+        scale: 0.5;
+    }
+
+}
 
 
 
-  /* Media query pour les écrans mobiles */
+/* Media query pour les écrans mobiles */
