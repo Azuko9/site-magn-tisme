@@ -23,6 +23,17 @@ body {
 
 }
 
+h1 {
+    margin: 5px;
+}
+
+h2 {
+    margin: 5px;
+}
+
+h3 {
+    margin: 5px;
+}
 
 header {
     position: fixed;
@@ -184,7 +195,7 @@ main {
 .sfour {
     left: 380px;
     top: 116px;
-    animation: 2.5s starsshine 6s infinite linear;
+    animation: 2.5s starsshine 8s infinite linear;
 }
 
 .tfour {
@@ -301,7 +312,7 @@ main {
 
 .box {
 
-    height: 500px;
+    height: 540px;
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -310,15 +321,16 @@ main {
     background-position: center;
     background-size: cover;
     color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
     transition: 1s;
     filter: grayscale(0.8);
+    transform: scale(0.95);
 
 }
 
 .box:hover {
-    transform: scale(1.02);
+    transform: scale(1);
     filter: grayscale(0);
 }
 
@@ -327,9 +339,9 @@ main {
     background-color: #00000090;
     border-radius: 10px;
     max-width: 800px;
-    padding: 20px;
-    margin: 10px;
-    text-align: justify;
+    padding: 10px;
+    margin: 5px;
+    line-height: 1.8em;
 }
 
 
