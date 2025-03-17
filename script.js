@@ -39,18 +39,18 @@ document.addEventListener("DOMContentLoaded", () => {
         title.style.opacity = isOver150 ? "0" : "1";
         title.style.position = isOver150 ? "relative" : "fixed";
 
-        // 5. Gestion de la position du container sauf sur iPad/iPhone
-        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+        // // 5. Gestion de la position du container sauf sur iPad/iPhone
+        // const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-        if (window.innerWidth > 768 && !isIOS) {
-            if (scrollY > 2000 && scrollY < 3500) {
-                container.style.top = (scrollY - 1950) + "px";
-            } else {
-                container.style.top = "auto";
-            }
-        } else {
-            container.style.top = "auto";
-        }
+        // if (window.innerWidth > 768 && !isIOS) {
+        //     if (scrollY > 2000 && scrollY < 3500) {
+        //         container.style.top = (scrollY - 1950) + "px";
+        //     } else {
+        //         container.style.top = "auto";
+        //     }
+        // } else {
+        //     container.style.top = "auto";
+        // }
     }
 
     window.addEventListener("scroll", handleScroll);

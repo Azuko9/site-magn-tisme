@@ -311,12 +311,11 @@ main {
 }
 
 .box {
-
-    height: 550px;
-    width: 400px;
+    min-height: 600px;
+    width: 90vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     background-position: center;
     background-size: cover;
@@ -324,21 +323,16 @@ main {
     padding: 10px;
     border-radius: 10px;
     transition: 1s;
-    filter: grayscale(0.8);
-    transform: scale(0.95);
+
 
 }
 
-.box:hover {
-    transform: scale(1);
-    filter: grayscale(0);
-}
+
 
 .box p {
     font-size: 1em;
     background-color: #00000090;
     border-radius: 10px;
-    max-width: 800px;
     padding: 10px;
     margin: 5px;
     line-height: 1.8em;
@@ -419,6 +413,10 @@ a {
 @media screen and (max-width: 1280px) {
     #star {
         scale: 1;
+    }
+
+    .box {
+        min-height: 400px;
     }
 }
 
