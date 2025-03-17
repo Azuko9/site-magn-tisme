@@ -312,7 +312,7 @@ main {
 
 .box {
 
-    height: 540px;
+    height: 550px;
     width: 400px;
     display: flex;
     flex-direction: column;
