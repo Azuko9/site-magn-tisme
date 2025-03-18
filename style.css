@@ -6,20 +6,31 @@
 }
 
 body {
-    min-height: 4500px;
+    min-height: 12000px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     font-family: Arial, sans-serif;
     background-color: #070a31;
+    margin: 0 auto;
     padding-top: 54px;
+}
+
+
+
+#corps {
+    position: fixed;
+    top: 0;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 1920px;
+    margin: 0 auto;
     background-image: url(img/sunsky.jpg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-
-
-
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -39,6 +50,8 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
+    max-width: 1920px;
+
     height: 100vh;
     background-image: url(img/stars.jpg);
     background-size: cover;
@@ -64,7 +77,6 @@ ul {
 
 
 main {
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,12 +106,32 @@ main {
 
     50% {
         background-color: #ffffff66;
+
+
+    }
+
+    55% {
+        background-color: #ffffff00;
+        background-image: none;
         scale: 1;
+        rotate: 0deg;
     }
 
     60% {
-        background-color: #ffffff;
-        scale: 1.8;
+        background-color: #ffffff00;
+        background-image: url(img/starlight.png);
+        background-size: cover;
+        scale: 5;
+        rotate: 90deg;
+    }
+
+    65% {
+        background-color: #ffffff00;
+        background-image: none;
+        scale: 1;
+        rotate: 180deg;
+
+
     }
 
     70% {
@@ -264,7 +296,7 @@ main {
 }
 
 #backgroundMontain img {
-    max-width: 1921px;
+    max-width: 1920px;
     width: auto
 }
 
@@ -285,7 +317,7 @@ main {
     text-align: center;
     position: fixed;
     transition: 1s;
-    z-index: 0;
+    z-index: 1;
 
 }
 
@@ -298,57 +330,75 @@ main {
 }
 
 .container {
-    z-index: -1;
-    margin-top: 2000px;
-    padding-bottom: 30vh;
+    margin-top: 3000px;
+    padding: 10vh 0;
     max-width: 1920px;
     position: absolute;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10vh;
+    background-color: #070a31;
 }
 
 .box {
-    min-height: 600px;
-    width: 90vw;
+    min-height: 180vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     background-position: center;
     background-size: cover;
     color: #fff;
-    padding: 10px;
     border-radius: 10px;
     transition: 1s;
 
 
 }
 
+.backgroundtext {
+    background-color: #00000090;
+    border-radius: 20px;
+    max-width: 800px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
 
 
 .box p {
     font-size: 1em;
-    background-color: #00000090;
-    border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     margin: 5px;
     line-height: 1.8em;
+
 }
 
 
 #storm {
     background-image: url(img/storm.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
 }
 
 #sun {
     background-image: url(img/sun.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
 }
 
 #zen {
     background-image: url(img/zen.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: top;
 }
 
 
@@ -366,14 +416,13 @@ main {
 
 .startMetatron {
 
-    z-index: -1;
+
     left: auto;
     scale: 1;
 }
 
 .endMetatron {
     z-index: 4;
-    left: -50px;
     bottom: -60px;
     scale: 0.5;
 }
@@ -383,6 +432,7 @@ main {
     z-index: 3;
     bottom: 0;
     width: 100vw;
+    max-width: 1920px;
     padding-bottom: 32px;
 
 }
@@ -393,6 +443,7 @@ li {
     padding: 5px 10px;
     margin: 5px;
     border-radius: 20px;
+    border: solid 1px #000000;
 
 
 }
@@ -406,31 +457,95 @@ a {
     text-decoration: none;
 }
 
+@media screen and (max-width: 619px) {
+    #star {
+        scale: 0.7;
+    }
+}
 
+@media screen and (min-width: 620px) {
+    #star {
+        scale: 1;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    #star {
+        scale: 1.2;
+    }
+}
 
 
 
 @media screen and (max-width: 1280px) {
-    #star {
-        scale: 1;
+
+    body {
+        padding-top: 0;
     }
 
-    .box {
-        min-height: 400px;
+    #Title {
+        margin-top: 5px;
+        scale: 0.75;
+
+    }
+
+    .startMetatron {
+        z-index: 0;
+        scale: 0.75;
+    }
+
+
+
+    .start-animation {
+        bottom: -450px;
+    }
+
+    .end-animation {
+        bottom: -250px;
+    }
+
+    .endMetatron {
+        left: -50px;
+        bottom: -91px;
+    }
+
+
+
+    #footer {
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #star {
+        scale: 1.7;
     }
 }
 
 
+
+
+@media screen and (max-width: 1920px) {
+
+    .endMetatron {
+        left: -50px;
+
+    }
+
+}
+
 @media screen and (min-height: 1080px) {
     #backgroundMontain img {
-        max-width: 1921px;
         width: auto;
     }
 }
 
+
 .invert-colors {
     filter: invert(100%);
 }
+
+
 
 
 @media (orientation: portrait) {
@@ -445,11 +560,36 @@ a {
         margin-bottom: 100px;
     }
 
-    #star {
-        scale: 0.5;
+
+
+    .start-animation {
+        bottom: -300px;
+    }
+
+    .end-animation {
+        bottom: 0px;
     }
 
 }
+
+@media screen and (max-width: 520px) {
+    ul {
+        flex-direction: column;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .endMetatron {
+        z-index: 0;
+
+    }
+}
+
+
 
 
 

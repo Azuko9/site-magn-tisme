@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = document.getElementById("Title");
     const footer = document.getElementById("footer");
     const container = document.querySelector(".container");
-    const header = document.querySelector("header");
+    const header = document.getElementById("corps");
     const audioElements = document.querySelectorAll("audio");
 
     // Constantes pour la gestion de la luminosité
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bgMontain.style.filter = `brightness(${brightnessValue})`;
 
         // Synchronisation de l'opacité du header avec la luminosité
-        header.style.opacity = 1 - (brightnessValue * 1.75);
+        header.style.opacity = (brightnessValue * 2);
 
         // 2. Gestion de l'animation du background
         const isOver200 = scrollY > 50;
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // 3. Gestion de la rotation et du changement de classe de Metatron
         metatron.style.transform = `rotate(${scrollY / 10}deg)`;
-        const isOver150 = scrollY > 1500;
+        const isOver150 = scrollY > 2200;
         metatron.classList.toggle("startMetatron", !isOver150);
         metatron.classList.toggle("endMetatron", isOver150);
 
@@ -40,17 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title.style.position = isOver150 ? "relative" : "fixed";
 
         // // 5. Gestion de la position du container sauf sur iPad/iPhone
-        // const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-        // if (window.innerWidth > 768 && !isIOS) {
-        //     if (scrollY > 2000 && scrollY < 3500) {
-        //         container.style.top = (scrollY - 1950) + "px";
-        //     } else {
-        //         container.style.top = "auto";
-        //     }
-        // } else {
-        //     container.style.top = "auto";
-        // }
     }
 
     window.addEventListener("scroll", handleScroll);
