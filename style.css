@@ -565,12 +565,13 @@ a {
 
 
     .start-animation {
-        bottom: -300px;
+        bottom: -350px;
     }
 
     .end-animation {
         bottom: 0px;
     }
+
 
 }
 
