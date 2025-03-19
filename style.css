@@ -457,9 +457,12 @@ a {
     text-decoration: none;
 }
 
+
+
+
 @media screen and (max-width: 619px) {
     #star {
-        scale: 0.7;
+        scale: 0.6;
     }
 }
 
