@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
         metatron.classList.toggle("endMetatron", isOver150);
 
         //  Gestion de l'opacité et de la position du titre
-        title.style.opacity = isOver150 ? "0" : "1";
+        title.style.opacity = isOver200 ? "0" : "1";
 
 
         // // 5. Gestion de la position du container sauf sur iPad/iPhone

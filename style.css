@@ -371,12 +371,13 @@ main {
 }
 
 .backgroundtext {
-    background-color: #00000090;
+    background-color: #000000dd;
     max-width: 800px;
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px;
 
 
 }
