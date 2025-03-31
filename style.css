@@ -622,6 +622,8 @@ a {
     background-size: cover;
     filter: brightness(10);
     margin: 0 auto;
+    position: relative;
+    bottom: -50px;
 
 }
 
