@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".container");
     const header = document.getElementById("corps");
     const audioElements = document.querySelectorAll("audio");
+    const scroll = document.getElementById("scroll");
 
     // Constantes pour la gestion de la luminosité
     const baseBrightness = 0.05;
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function handleScroll() {
         const scrollY = window.scrollY || document.documentElement.scrollTop;
 
-        // 1. Gestion de la luminosité de bgMontain
+        //  Gestion de la luminosité de bgMontain
         const tranche = Math.floor(scrollY / 200);
         let brightnessValue = baseBrightness + (tranche * increment);
         if (brightnessValue > 1) brightnessValue = 1;
@@ -24,18 +25,21 @@ document.addEventListener("DOMContentLoaded", () => {
         // Synchronisation de l'opacité du header avec la luminosité
         header.style.opacity = (brightnessValue * 2);
 
-        // 2. Gestion de l'animation du background
+        // Gestion de l'animation du background
         const isOver200 = scrollY > 50;
         bgMontain.classList.toggle("start-animation", isOver200);
         bgMontain.classList.toggle("end-animation", !isOver200);
 
-        // 3. Gestion de la rotation et du changement de classe de Metatron
+        // Gestion du gif pour scroller
+        scroll.style.opacity = isOver200 ? "0" : "1";
+
+        // Gestion de la rotation et du changement de classe de Metatron
         metatron.style.transform = `rotate(${scrollY / 10}deg)`;
-        const isOver150 = scrollY > 2200;
+        const isOver150 = scrollY > 900;
         metatron.classList.toggle("startMetatron", !isOver150);
         metatron.classList.toggle("endMetatron", isOver150);
 
-        // 4. Gestion de l'opacité et de la position du titre
+        //  Gestion de l'opacité et de la position du titre
         title.style.opacity = isOver150 ? "0" : "1";
 
 
