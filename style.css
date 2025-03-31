@@ -569,6 +569,7 @@ a {
     .box {
         opacity: 1;
         margin-bottom: 100px;
+        min-height: 600px;
     }
 
 
