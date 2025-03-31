@@ -347,13 +347,13 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 200px;
     margin-bottom: 100px;
 }
 
 .box {
-    min-height: 600px;
-    width: 450px;
+    min-height: 500px;
+    max-width: 850px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -362,6 +362,8 @@ main {
     background-size: cover;
     color: #fff;
     transition: 1s;
+    z-index: 2;
+
 
 
 }
@@ -388,21 +390,18 @@ main {
 
 #storm {
     background-image: url(img/storm.jpg);
-    background-attachment: fixed;
     background-size: cover;
     background-position: top;
 }
 
 #sun {
     background-image: url(img/sun.jpg);
-    background-attachment: fixed;
     background-size: cover;
     background-position: top;
 }
 
 #zen {
     background-image: url(img/zen.jpg);
-    background-attachment: fixed;
     background-size: cover;
     background-position: top;
 }
