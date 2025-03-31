@@ -377,7 +377,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+
 
 
 }
@@ -628,6 +628,7 @@ a {
     max-width: 600px;
     text-align: justify;
     font-size: 1.2em;
+    padding: 5px;
 }
 
 /* Media query pour les écrans mobiles */

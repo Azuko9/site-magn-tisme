@@ -30,8 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         bgMontain.classList.toggle("start-animation", isOver200);
         bgMontain.classList.toggle("end-animation", !isOver200);
 
-        // Gestion du gif pour scroller
-        scroll.style.opacity = isOver200 ? "0" : "1";
+
 
         // Gestion de la rotation et du changement de classe de Metatron
         metatron.style.transform = `rotate(${scrollY / 10}deg)`;
@@ -41,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //  Gestion de l'opacité et de la position du titre
         title.style.opacity = isOver200 ? "0" : "1";
-
+        // Gestion du gif pour scroller
+        scroll.style.opacity = isOver150 ? "0" : "1";
 
         // // 5. Gestion de la position du container sauf sur iPad/iPhone
 
