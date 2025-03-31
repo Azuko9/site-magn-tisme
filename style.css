@@ -581,7 +581,17 @@ a {
     }
 
 
+
+
 }
+
+@media (hover: none) and (pointer: coarse) {
+    #scroll {
+        rotate: 180deg;
+    }
+
+}
+
 
 @media screen and (max-width: 520px) {
     ul {
