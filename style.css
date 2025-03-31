@@ -352,7 +352,7 @@ main {
 }
 
 .box {
-    min-height: 500px;
+    min-height: 400px;
     max-width: 850px;
     display: flex;
     flex-direction: column;
@@ -363,6 +363,8 @@ main {
     color: #fff;
     transition: 1s;
     z-index: 2;
+    border: 10px solid #ffffff;
+    box-shadow: 0 0 20px #000000;
 
 
 
