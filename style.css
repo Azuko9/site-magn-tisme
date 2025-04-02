@@ -352,8 +352,8 @@ main {
 }
 
 .box {
-    min-height: 400px;
-    max-width: 850px;
+    min-height: 500px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -372,7 +372,6 @@ main {
 
 .backgroundtext {
     background-color: #000000dd;
-    max-width: 800px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -394,19 +393,19 @@ main {
 #storm {
     background-image: url(img/storm.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
 }
 
 #sun {
     background-image: url(img/sun.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 #zen {
     background-image: url(img/zen.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 
