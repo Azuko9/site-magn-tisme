@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const scrollY = window.scrollY || document.documentElement.scrollTop;
 
         //  Gestion de la luminosité de bgMontain
-        const tranche = Math.floor(scrollY / 130);
+        const tranche = Math.floor(scrollY / 150);
         let brightnessValue = baseBrightness + (tranche * increment);
         if (brightnessValue > 1) brightnessValue = 1;
         bgMontain.style.filter = `brightness(${brightnessValue})`;
