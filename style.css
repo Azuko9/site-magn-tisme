@@ -531,111 +531,111 @@ a {
     }
 
 
+}
 
 
 
+@media screen and (max-width: 1920px) {
 
-    @media screen and (max-width: 1920px) {
-
-        .endMetatron {
-            left: -50px;
-
-        }
-
-        .box {
-            max-width: 1200px;
-        }
+    .endMetatron {
+        left: -50px;
 
     }
 
-    @media screen and (min-height: 1080px) {
-        #backgroundMontain img {
-            width: auto;
-        }
+    .box {
+        max-width: 1200px;
     }
 
+}
 
-    .invert-colors {
-        filter: invert(100%);
+@media screen and (min-height: 1080px) {
+    #backgroundMontain img {
+        width: auto;
+    }
+}
+
+
+.invert-colors {
+    filter: invert(100%);
+}
+
+
+
+
+@media (orientation: portrait) {
+    #backgroundMontain img {
+
+        width: auto;
+        scale: 1;
     }
 
-
-
-
-    @media (orientation: portrait) {
-        #backgroundMontain img {
-
-            width: auto;
-            scale: 1;
-        }
-
-        .box {
-            opacity: 1;
-            margin-bottom: 100px;
-            min-height: 80vh;
-            width: auto;
-        }
-
-
-
-        .start-animation {
-            bottom: -350px;
-        }
-
-        .end-animation {
-            bottom: -5px;
-        }
-
-
-
-
-    }
-
-    @media (hover: none) and (pointer: coarse) {
-        #scroll {
-            rotate: 180deg;
-        }
-
-    }
-
-
-    @media screen and (max-width: 520px) {
-        ul {
-            flex-direction: column;
-            margin-bottom: 10px;
-            gap: 10px;
-        }
-
-        li {
-            padding: 10px;
-        }
-
-        .endMetatron {
-            z-index: 0;
-
-        }
+    .box {
+        opacity: 1;
+        margin-bottom: 100px;
+        min-height: 80vh;
+        width: auto;
     }
 
 
 
+    .start-animation {
+        bottom: -350px;
+    }
+
+    .end-animation {
+        bottom: -5px;
+    }
+
+
+
+
+}
+
+@media (hover: none) and (pointer: coarse) {
     #scroll {
-        width: 100px;
-        height: 100px;
-        background-image: url(img/scroll.gif);
-        background-position: center;
-        background-size: cover;
-        filter: brightness(10);
-        margin: 0 auto;
-        position: relative;
-        bottom: -28px;
-
+        rotate: 180deg;
     }
 
-    #intro {
-        max-width: 600px;
-        text-align: justify;
-        font-size: 1.2em;
-        padding: 5px;
+}
+
+
+@media screen and (max-width: 520px) {
+    ul {
+        flex-direction: column;
+        margin-bottom: 10px;
+        gap: 10px;
     }
 
-    /* Media query pour les écrans mobiles */
+    li {
+        padding: 10px;
+    }
+
+    .endMetatron {
+        z-index: 0;
+
+    }
+}
+
+
+
+#scroll {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/scroll.gif);
+    background-position: center;
+    background-size: cover;
+    filter: brightness(10);
+    margin: 0 auto;
+    position: relative;
+    bottom: -28px;
+
+}
+
+#intro {
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+/* Media query pour les écrans mobiles */
