@@ -353,7 +353,6 @@ main {
 
 .box {
     min-height: 500px;
-    width: 1000px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -530,6 +529,10 @@ a {
     #star {
         scale: 1.7;
     }
+
+    .box {
+        width: 1200px;
+    }
 }
 
 
@@ -569,6 +572,7 @@ a {
         opacity: 1;
         margin-bottom: 100px;
         min-height: 80vh;
+        width: auto;
     }
 
 
