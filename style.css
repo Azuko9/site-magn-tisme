@@ -353,6 +353,7 @@ main {
 
 .box {
     min-height: 500px;
+    max-width: 1190px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
