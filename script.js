@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const bgMontain = document.getElementById("backgroundMontain");
     const metatron = document.getElementById("metatron");
     const title = document.getElementById("Title");
+    const backgroundText = document.querySelector(".backgroundtext");
+    const box = document.querySelectorAll(".box");
     const footer = document.getElementById("footer");
     const container = document.querySelector(".container");
     const header = document.getElementById("corps");
@@ -70,5 +72,29 @@ document.addEventListener("DOMContentLoaded", () => {
             audio.classList.remove("invert-colors");
         });
     });
+
+    function checkPosition() {
+        box.forEach(box => {
+            const backgroundText = box.querySelector(".backgroundtext");
+
+            if (!backgroundText) return;
+
+            const backgroundRect = backgroundText.getBoundingClientRect();
+            const footerRect = footer.getBoundingClientRect();
+
+            if (backgroundRect.bottom < footerRect.top) {
+                // backgroundtext est au-dessus du footer
+                box.classList.add("show-backgroundtext");
+            } else {
+                box.classList.remove("show-backgroundtext");
+            }
+        });
+    }
+
+    // Vérifie la position au scroll
+    window.addEventListener("scroll", checkPosition);
+    // Et au chargement
+    checkPosition();
+
 });
 
