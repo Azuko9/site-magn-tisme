@@ -144,6 +144,54 @@ main {
     }
 }
 
+@keyframes starsshineTwo {
+    /* 0% {
+        background-color: #ffffff66;
+    }
+
+
+    5% {
+        background-color: #ffffff66;
+
+
+    } */
+
+    0% {
+        background-color: #ffffff00;
+        background-image: url(img/starlight.png);
+        background-size: cover;
+        scale: 1;
+        rotate: 0deg;
+    }
+
+    80% {
+        background-color: #ffffff00;
+        background-image: url(img/starlight.png);
+        background-size: cover;
+        scale: 5;
+        rotate: 90deg;
+    }
+
+    100% {
+        background-color: #ffffff00;
+        background-image: url(img/starlight.png);
+        background-size: cover;
+        scale: 1;
+        rotate: 180deg;
+
+
+    }
+
+    /* 95% {
+        background-color: #ffffff66;
+        scale: 1;
+    }
+
+    100% {
+        background-color: #ffffff66;
+    } */
+}
+
 .stars {
     width: 6px;
     height: 6px;
@@ -178,6 +226,11 @@ main {
     animation: 2.5s starsshine 4s infinite linear;
 }
 
+.AvisSone {
+
+    animation: 1.5s starsshineTwo 0s infinite linear;
+}
+
 .colp {
     top: 10px;
     opacity: 0;
@@ -196,6 +249,10 @@ main {
     left: 170px;
     top: 36px;
     animation: 2.5s starsshine 2s infinite linear;
+}
+
+.AvisStwo {
+    animation: 1.5s starsshineTwo 0.1s infinite linear;
 }
 
 .somp {
@@ -219,6 +276,10 @@ main {
 
 }
 
+.AvisSthree {
+    animation: 1.5s starsshineTwo 0.2s infinite linear;
+}
+
 .sthree p {
     top: 10px;
     opacity: 0;
@@ -227,7 +288,11 @@ main {
 .sfour {
     left: 380px;
     top: 116px;
-    animation: 2.5s starsshine 8s infinite linear;
+    animation: 2.5s starsshinetwoo 8s infinite linear;
+}
+
+.AvisSfour {
+    animation: 1.5s starsshineTwo 0.3s infinite linear;
 }
 
 .tfour {
@@ -242,6 +307,10 @@ main {
     left: 444px;
     top: 66px;
     animation: 2.5s starsshine 6s infinite linear;
+}
+
+.AvisSfive {
+    animation: 1.5s starsshineTwo 0.4s infinite linear;
 }
 
 .tfive {
@@ -414,7 +483,13 @@ main {
     background-position: center;
 }
 
+.notes {
+    display: flex;
+    width: 100px;
+    justify-content: space-between;
 
+
+}
 
 #metatron {
     width: 217px;
@@ -424,6 +499,33 @@ main {
     background-position: center;
     background-size: cover;
 
+
+}
+
+#titreAvis {
+    position: absolute;
+
+
+}
+
+
+#avisClient {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.avis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    min-height: 400px;
+    gap: 10px;
+    background-color: #000000aa;
+    padding: 10px 20px;
 
 }
 
