@@ -465,7 +465,7 @@ main {
 #titreAvis {
   position: absolute;
 }
-#linkAvis {
+.linkDivers {
   padding: 5px 10px;
   margin: 5px;
   border-radius: 20px;
@@ -476,7 +476,7 @@ main {
   z-index: 2;
 }
 
-#linkAvis:hover {
+.linDivers:hover {
   background-color: #ffffff;
 }
 
@@ -505,6 +505,11 @@ main {
   text-shadow: 2px 2px 5px #000000;
   font-size: 2em;
   margin-top: 200px;
+}
+
+#map {
+  min-width: 100%;
+  z-index: 2;
 }
 
 .startMetatron {
