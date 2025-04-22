@@ -477,7 +477,7 @@ main {
   z-index: 2;
 }
 
-.linDivers:hover {
+.linkDivers:hover {
   background-color: #ffffff;
 }
 
@@ -540,6 +540,7 @@ li {
   margin: 5px;
   border-radius: 20px;
   border: solid 1px #000000;
+  box-shadow: 2px 2px 20px #000000;
 }
 
 li:hover {
