@@ -395,6 +395,7 @@ main {
 
 .box {
   min-height: 500px;
+  width: 90%;
   max-width: 1190px;
   display: flex;
   flex-direction: column;
@@ -427,6 +428,7 @@ main {
   font-size: 1em;
   margin-bottom: 15px;
   line-height: 1.1em;
+
 }
 
 #storm {
@@ -495,8 +497,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 300px;
-  min-height: 400px;
+  max-width: 280px;
+  min-height: 350px;
   gap: 10px;
   background-color: #000000aa;
   padding: 10px 20px;
