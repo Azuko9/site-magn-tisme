@@ -511,7 +511,7 @@ main {
 }
 
 #map {
-  min-width: 100%;
+  min-width: 90%;
   z-index: 2;
   box-shadow: 2px 2px 20px #000000;
   border: solid 10px #ffffff;
@@ -637,7 +637,7 @@ a {
     opacity: 1;
     margin-bottom: 100px;
     min-height: 80vh;
-    width: auto;
+    width: 90%;
   }
 
   .start-animation {
@@ -684,9 +684,9 @@ a {
 }
 
 #intro {
-  max-width: 600px;
-  text-align: justify;
-  font-size: 1.2em;
+  max-width: 800px;
+  text-align: center;
+  font-size: 2em;
   padding: 5px;
 }
 
