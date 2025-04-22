@@ -500,6 +500,8 @@ main {
   gap: 10px;
   background-color: #000000aa;
   padding: 10px 20px;
+  box-shadow: 2px 2px 15px #000000;
+  border-radius: 4px;
 }
 
 #avisTitre {
