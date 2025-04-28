@@ -343,7 +343,7 @@ main {
 
 #backgroundMontain img {
   max-width: 1920px;
-  width: auto;
+  width: 100vw;
 }
 
 .start-animation {
