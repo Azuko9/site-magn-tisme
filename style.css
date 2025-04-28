@@ -479,6 +479,16 @@ main {
   z-index: 2;
 }
 
+a.linkDivers {
+  color: #003366;
+  /* Bleu foncé pour un meilleur contraste */
+  background-color: #ffffff;
+  /* Fond blanc */
+  text-decoration: none;
+  /* Soulignement pour indiquer un lien */
+}
+
+
 .linkDivers:hover {
   background-color: #ffffff;
 }
