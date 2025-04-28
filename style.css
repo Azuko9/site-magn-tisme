@@ -473,7 +473,9 @@ main {
   margin: 5px;
   border-radius: 20px;
   border: solid 1px #000000;
-  color: #000000;
+  color: #003366;
+  text-decoration: underline;
+  transition: color 0.2s ease;
   background-color: #ffffff66;
   box-shadow: 2px 2px 5px #000000;
   z-index: 2;
@@ -481,6 +483,11 @@ main {
 
 .linkDivers:hover {
   background-color: #ffffff;
+}
+
+.linkDivers:hover,
+.linkDivers:focus {
+  color: #000;
 }
 
 #avisClient {
