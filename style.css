@@ -472,7 +472,6 @@ main {
   padding: 5px 10px;
   margin: 5px;
   border-radius: 20px;
-  border: solid 1px #000000;
   color: #003366;
   text-decoration: underline;
   transition: color 0.2s ease;
