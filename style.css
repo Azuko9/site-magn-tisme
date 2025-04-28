@@ -473,7 +473,6 @@ main {
   margin: 5px;
   border-radius: 20px;
   color: #003366;
-  text-decoration: underline;
   transition: color 0.2s ease;
   background-color: #ffffff66;
   box-shadow: 2px 2px 5px #000000;
@@ -549,7 +548,6 @@ li {
   padding: 5px 10px;
   margin: 5px;
   border-radius: 20px;
-  border: solid 1px #000000;
   box-shadow: 2px 2px 20px #000000;
 }
 
