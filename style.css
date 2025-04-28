@@ -619,11 +619,7 @@ a {
   }
 }
 
-@media screen and (min-height: 1080px) {
-  #backgroundMontain img {
-    width: auto;
-  }
-}
+
 
 .invert-colors {
   filter: invert(100%);
