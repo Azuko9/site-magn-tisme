@@ -22,7 +22,7 @@ body {
   width: 100vw;
   max-width: 1920px;
   margin: 0 auto;
-  background-image: url(img/sunsky.jpg);
+  background-image: url(img/sunsky.webp);
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,7 +48,7 @@ header {
   width: 100vw;
   max-width: 1920px;
   height: 100vh;
-  background-image: url(img/stars.jpg);
+  background-image: url(img/stars.webp);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -108,7 +108,7 @@ main {
 
   60% {
     background-color: #ffffff00;
-    background-image: url(img/starlight.png);
+    background-image: url(img/starlight.webp);
     background-size: cover;
     scale: 5;
     rotate: 90deg;
@@ -145,7 +145,7 @@ main {
 
   0% {
     background-color: #ffffff00;
-    background-image: url(img/starlight.png);
+    background-image: url(img/starlight.webp);
     background-size: cover;
     scale: 1;
     rotate: 0deg;
@@ -153,7 +153,7 @@ main {
 
   80% {
     background-color: #ffffff00;
-    background-image: url(img/starlight.png);
+    background-image: url(img/starlight.webp);
     background-size: cover;
     scale: 5;
     rotate: 90deg;
@@ -161,7 +161,7 @@ main {
 
   100% {
     background-color: #ffffff00;
-    background-image: url(img/starlight.png);
+    background-image: url(img/starlight.webp);
     background-size: cover;
     scale: 1;
     rotate: 180deg;
@@ -432,19 +432,19 @@ main {
 }
 
 #storm {
-  background-image: url(img/storm.jpg);
+  background-image: url(img/storm.webp);
   background-size: cover;
   background-position: bottom;
 }
 
 #sun {
-  background-image: url(img/sun.jpg);
+  background-image: url(img/sun.webp);
   background-size: cover;
   background-position: center;
 }
 
 #zen {
-  background-image: url(img/zen.jpg);
+  background-image: url(img/zen.webp);
   background-size: cover;
   background-position: center;
 }
