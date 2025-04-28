@@ -1,0 +1,27 @@
+{
+  "name": "Jean-Jacques Abadia Magnétiseur",
+  "short_name": "Abadia",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Jean-Jacques Abadia, magnétiseur et thérapeute à Anglet, Biarritz. Soins énergétiques et bien-être physique et émotionnel.",
+  "icons": [
+    {
+      "src": "/img/favicon/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/favicon/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/img/favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "fr-FR"
+}
