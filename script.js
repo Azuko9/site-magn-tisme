@@ -1,60 +1,67 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Sélection des éléments
-    const bgMontain = document.getElementById("backgroundMontain");
-    const metatron = document.getElementById("metatron");
-    const title = document.getElementById("Title");
-    const backgroundText = document.querySelector(".backgroundtext");
-    const box = document.querySelectorAll(".box");
-    const footer = document.getElementById("footer");
-    const container = document.querySelector(".container");
-    const header = document.getElementById("corps");
-    const audioElements = document.querySelectorAll("audio");
-    const scroll = document.getElementById("scroll");
+    // Sélection unique des éléments pour éviter répétitions
+    const elements = {
+        bgMontain: document.getElementById("backgroundMontain"),
+        metatron: document.getElementById("metatron"),
+        title: document.getElementById("Title"),
+        footer: document.getElementById("footer"),
+        header: document.getElementById("corps"),
+        scroll: document.getElementById("scroll"),
+        boxList: document.querySelectorAll(".box"),
+        audioList: document.querySelectorAll("audio")
+    };
 
-    // Constantes pour la gestion de la luminosité
+    // Optimiser les constantes
     const baseBrightness = 0.05;
     const increment = 0.01;
 
-    function handleScroll() {
-        const scrollY = window.scrollY || document.documentElement.scrollTop;
+    // Handler de scroll optimisé avec requestAnimationFrame
+    let ticking = false;
 
-        //  Gestion de la luminosité de bgMontain
+    const handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        // Luminosité optimisée
         const tranche = Math.floor(scrollY / 100);
-        let brightnessValue = baseBrightness + (tranche * increment);
-        if (brightnessValue > 1) brightnessValue = 1;
-        bgMontain.style.filter = `brightness(${brightnessValue})`;
+        const brightnessValue = Math.min(baseBrightness + tranche * increment, 1);
+        elements.bgMontain.style.filter = `brightness(${brightnessValue})`;
 
-        // Synchronisation de l'opacité du header avec la luminosité
-        header.style.opacity = (brightnessValue * 2);
+        // Synchronisation opacité header
+        elements.header.style.opacity = Math.min(brightnessValue * 2, 1);
 
-        // Gestion de l'animation du background
+        // Gestion classes animation
         const isOver200 = scrollY > 50;
-        bgMontain.classList.toggle("start-animation", isOver200);
-        bgMontain.classList.toggle("end-animation", !isOver200);
+        elements.bgMontain.classList.toggle("start-animation", isOver200);
+        elements.bgMontain.classList.toggle("end-animation", !isOver200);
 
-
-
-        // Gestion de la rotation et du changement de classe de Metatron
-        metatron.style.transform = `rotate(${scrollY / 10}deg)`;
+        // Rotation et classes Metatron
+        elements.metatron.style.transform = `rotate(${scrollY / 10}deg)`;
         const isOver150 = scrollY > 900;
-        metatron.classList.toggle("startMetatron", !isOver150);
-        metatron.classList.toggle("endMetatron", isOver150);
+        elements.metatron.classList.toggle("startMetatron", !isOver150);
+        elements.metatron.classList.toggle("endMetatron", isOver150);
 
-        //  Gestion de l'opacité et de la position du titre
-        title.style.opacity = isOver150 ? "0" : "1";
-        // Gestion du gif pour scroller
-        scroll.style.opacity = isOver150 ? "0" : "1";
+        // Opacité titre et scroll gif
+        elements.title.style.opacity = elements.scroll.style.opacity = isOver150 ? "0" : "1";
 
-        // // 5. Gestion de la position du container sauf sur iPad/iPhone
+        // Vérification des positions (regroupée dans le même listener pour éviter répétition)
+        checkPosition();
 
-    }
+        ticking = false;
+    };
 
-    window.addEventListener("scroll", handleScroll);
+    const requestTick = () => {
+        if (!ticking) {
+            requestAnimationFrame(handleScroll);
+            ticking = true;
+        }
+    };
 
-    // Gestion des audios : lecture exclusive et inversion des couleurs
-    audioElements.forEach((audio) => {
+    window.addEventListener("scroll", requestTick);
+
+    // Gestion audio (éviter boucles imbriquées inutiles)
+    elements.audioList.forEach(audio => {
         audio.addEventListener("play", () => {
-            audioElements.forEach((otherAudio) => {
+            elements.audioList.forEach(otherAudio => {
                 if (otherAudio !== audio) {
                     otherAudio.pause();
                     otherAudio.currentTime = 0;
@@ -64,37 +71,25 @@ document.addEventListener("DOMContentLoaded", () => {
             audio.classList.add("invert-colors");
         });
 
-        audio.addEventListener("pause", () => {
-            audio.classList.remove("invert-colors");
-        });
+        const removeInvertColors = () => audio.classList.remove("invert-colors");
 
-        audio.addEventListener("ended", () => {
-            audio.classList.remove("invert-colors");
-        });
+        audio.addEventListener("pause", removeInvertColors);
+        audio.addEventListener("ended", removeInvertColors);
     });
 
+    // Vérification optimisée des positions
     function checkPosition() {
-        box.forEach(box => {
-            const backgroundText = box.querySelector(".backgroundtext");
+        const footerTop = elements.footer.getBoundingClientRect().top;
 
+        elements.boxList.forEach(box => {
+            const backgroundText = box.querySelector(".backgroundtext");
             if (!backgroundText) return;
 
-            const backgroundRect = backgroundText.getBoundingClientRect();
-            const footerRect = footer.getBoundingClientRect();
-
-            if (backgroundRect.bottom < footerRect.top) {
-                // backgroundtext est au-dessus du footer
-                box.classList.add("show-backgroundtext");
-            } else {
-                box.classList.remove("show-backgroundtext");
-            }
+            const backgroundRectBottom = backgroundText.getBoundingClientRect().bottom;
+            box.classList.toggle("show-backgroundtext", backgroundRectBottom < footerTop);
         });
     }
 
-    // Vérifie la position au scroll
-    window.addEventListener("scroll", checkPosition);
-    // Et au chargement
+    // Vérification initiale au chargement
     checkPosition();
-
 });
-
