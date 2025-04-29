@@ -347,7 +347,7 @@ main {
 }
 
 .start-animation {
-  bottom: -400px;
+  bottom: -300px;
   z-index: 2;
 }
 
@@ -604,11 +604,11 @@ a {
   }
 
   .start-animation {
-    bottom: -450px;
+    bottom: -180px;
   }
 
   .end-animation {
-    bottom: -250px;
+    bottom: -50px;
   }
 
   .endMetatron {
@@ -653,7 +653,7 @@ a {
   }
 
   .start-animation {
-    bottom: -350px;
+    bottom: -130px;
   }
 
   .end-animation {
